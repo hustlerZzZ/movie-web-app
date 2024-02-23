@@ -8,7 +8,7 @@ export default function MovieCard({ movieData }) {
   if (movieData.length === 0) return <h3>Error in fetching the movie data</h3>;
   else {
     return (
-      <div className="flex gap-4 my-10 p-4 rounded-md bg-white">
+      <div className="flex flex-col md:flex-row gap-4 md:my-10 p-2 items-center md:p-4 rounded-md bg-white">
         <div>
           <Image
             src={movie.portrait_image}
@@ -51,7 +51,7 @@ export default function MovieCard({ movieData }) {
           </div>
           <div>
             <h2 className="text-orange-600 font-bold text-xl">About</h2>
-            <p className="w-[500px]">{movie.short_description}</p>
+            <p className="md:w-[500px]">{movie.short_description}</p>
           </div>
         </div>
       </div>
